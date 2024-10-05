@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('your-background-image.jpg'); /* 원하는 배경 이미지 경로 */
+    background-size: cover;
+    background-position: center;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.8); /* 반투명 배경 */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;               /* flexbox 사용 */
+    flex-direction: column;      /* 세로 방향 정렬 */
+}
+
+.input-group {
+    display: flex;               /* flexbox 사용 */
+    flex-direction: column;      /* 세로 방향 정렬 */
+}
+
+.login-input {
+    width: 250px; /* 입력창 너비 */
+    height: 40px; /* 입력창 높이 */
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-button {
+    width: 250px; /* 버튼 너비 */
+    height: 40px; /* 버튼 높이 */
+    margin: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    opacity: 0.9; /* 기본 버튼 호버 효과 */
+}
+
+.naver-button {
+    background-color: #03c75a; /* 네이버 색상 */
+}
+
+.naver-button:hover {
+    background-color: #028a3c; /* 네이버 호버 색상 */
+}
+
+.kakao-button {
+    background-color: #ffdd00; /* 카카오 색상 */
+}
+
+.kakao-button:hover {
+    background-color: #e0c700; /* 카카오 호버 색상 */
+}
+
+.signup-link {
+    margin-top: 15px;
+}
+
+.signup-link a {
+    color: #007bff; /* 링크 색상 */
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline; /* 링크에 마우스 오버 시 밑줄 */
+}
