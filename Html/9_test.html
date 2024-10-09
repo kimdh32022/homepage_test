@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>연습장</title>
+    <style>
+        fieldset {
+            display: block;
+            padding: 10px;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            border-width: 10px;
+            border-color: black;
+            /* 창이 작아져도 형체를 유지 하기 위해 block을 지정 6단원  */
+        }
+
+        ul {
+            list-style: none;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+            /* 리스트의 기본 .을 없애기 위해 none으로 설정 그 후 왼쪽 정렬 */
+        }
+
+        li {
+            margin: 0;
+            padding: 0;
+            /* 리스트를 왼쪽에 정렬 시키기 위해 마진과 패딩을 0으로 만듬 */
+        }
+
+        legend {
+            font-size: 30px;
+            font-weight: 900;
+            /* 폰트 사이즈 및 굵기 조절 */
+        }
+
+        h1 {
+            color: black;
+            font-weight: 900;
+            font-style: oblique;
+            text-align: center;
+            margin: 0;
+            text-shadow: 10px 10px 6px skyblue;
+        }
+
+        body {
+            background-color: rgba(74, 239, 239, 0.36);
+            background: linear-gradient(180deg,rgba(74, 239, 239, 0.36)white);
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+        <h1>상세 주소 및 개인정보</h1>
+        <div classs="main_contant">
+            <ul>
+                <fieldset>
+                    <legend>인적사항</legend>
+                    <li>
+                        <label for="name">이름</label>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <label>전화번호</label>
+                        <input type="tel">
+                    </li>
+                    <li>
+                        <label>이메일</label>
+                        <input type="email">
+                    </li>
+                </fieldset>
+                <fieldset>
+                    <!-- fieldset으로 주소,인적사항,가족관계로 항목을 묶음 -->
+                    <legend>주소</legend>
+                    <!-- 5단원 legend, labal, input, checkbox, tel, email, text, number의 개념으로 개인 상세 정보창을 만듬 -->
+                    <li>
+                        <label>도로명 주소</label>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <label>상세주소</label>
+
+                        <input type="text">
+                    </li>
+                </fieldset>
+
+                <fieldset>
+                    <legend>가족관계</legend>
+                    <li>
+                        <label><input type="checkbox">父(부)</label>
+                    </li>
+                    <label><input type="checkbox">母(모)</label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox">兄(형)</label>
+                        <input type="number" min="0">명
+                    </li>
+                    <li>
+                        <label><input type="checkbox">弟(제)</label>
+                        <input type="number" min="0">명
+                    </li>
+                    <li>
+                        <label><input type="checkbox">姉(자)</label>
+                        <input type="number" min="0">명
+                    </li>
+                    <li>
+                        <label><input type="checkbox">妹(매)</label>
+                        <input type="number" min="0">명
+                    </li>
+
+                </fieldset>
+            </ul>
+        </div>
+    </form>
+    <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+        <li><a href="4.login.html">Log_in</a></li>
+        <li><a href="5.join.html">Join</a></li>
+        <li><a href="6.mainpage.html">Mainpage</a></li>
+    
+    </ol>
+        
+</body>
+
+</html>
