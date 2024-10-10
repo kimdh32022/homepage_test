@@ -11,8 +11,9 @@
             box-sizing: border-box;
             width: 100%;
             height: 100%;
-            border-width: 10px;
+            border-width: 2px;
             border-color: black;
+            border-radius: 5px;
             /* 창이 작아져도 형체를 유지 하기 위해 block을 지정 6단원  */
         }
 
@@ -46,8 +47,10 @@
         }
 
         body {
-            background-color: rgba(74, 239, 239, 0.36);
-            background: linear-gradient(180deg,rgba(74, 239, 239, 0.36)white);
+            background: linear-gradient(180deg, rgba(74, 239, 239, 0.36)white);
+        }
+        div.nameplate{
+            border-color: 1px black;
         }
     </style>
 
@@ -61,8 +64,10 @@
                 <fieldset>
                     <legend>인적사항</legend>
                     <li>
-                        <label for="name">이름</label>
-                        <input type="text">
+                        <div class="nameplate">
+                            <label for="name">이름</label>
+                            <input type="text">
+                        </div>
                     </li>
                     <li>
                         <label>전화번호</label>
@@ -73,6 +78,7 @@
                         <input type="email">
                     </li>
                 </fieldset>
+                <p>text, tel, email을 사용하여 필드를 나타내기</p>
                 <fieldset>
                     <!-- fieldset으로 주소,인적사항,가족관계로 항목을 묶음 -->
                     <legend>주소</legend>
@@ -116,16 +122,6 @@
             </ul>
         </div>
     </form>
-    <ol>
-        <li><a href="1.html">HTML</a></li>
-        <li><a href="2.html">CSS</a></li>
-        <li><a href="3.html">JavaScript</a></li>
-        <li><a href="4.login.html">Log_in</a></li>
-        <li><a href="5.join.html">Join</a></li>
-        <li><a href="6.mainpage.html">Mainpage</a></li>
-    
-    </ol>
-        
 </body>
 
 </html>
