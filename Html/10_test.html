@@ -78,17 +78,49 @@
         #movexy:hover {
             transform: translate(50px, 50px);
         }
+
+        div.br-tr,
+        .border-circle {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 30px;
+        }
+
+        .br-tr {
+            background-color: blue;
+            transition: all ease 1s;
+            display: block;
+        }
+
+        .br-tr:hover {
+            background-color: blueviolet;
+        }
+
+        .border-circle {
+            background-color: yellow;
+            border: 3px solid black;
+            transition: all linear 3s;
+        }
+
+        .border-circle:hover {
+            border-radius: 100%;
+        }
+        .diagram{
+            display: block;
+        }
     </style>
 </head>
 
 <body>
     <h1>2024-10-10 복습</h1>
+    <button><a href="../index.html" background-color:none;>HOME</a></button>
     <fieldset class="10part">
         <legend>10단원</legend>
         <fieldset class="combination_selector">
-            <legend>연결 선택자</legend>
+            <legend>1</legend>
             <section>
-                <h1>1</h1>
+                <h1>연결 선택자</h1>
                 <p>인접 형제 선택자 : 같은 부모를 가진 형제 요소 중 첫번째 동생 요소에만 스타일을 적용</p>
                 <p>연결 선택자란 선택자와 선택자를 연결해 적용 대상을 제한하는 선택자.</p>
                 <p>컴비네이션 선택자(combination selector) 또는 '조합선택자'라고 함.</p>
@@ -96,17 +128,17 @@
             </section>
         </fieldset>
         <fieldset>
-            <legend>형제 선택자</legend>
+            <legend>2</legend>
             <section>
-                <h1>2</h1>
+                <h1>형제 선택자</h1>
                 <p2>형제 선택자란 형제 요소들에 스타일을 적용하는 방식.<br>인접 형제 선택자와 다른 점은 모든 형제 요소에 다 적용 됨.</p2>
             </section>
         </fieldset>
         <fieldset>
-            <legend>속성 선택자</legend>
+            <legend>3</legend>
             <section>
-                <h1>3</h1>
-                <p>속성 선택자란 지정한 속성을 가진 요소를 찾아 스타일 적용하는 것.</p>
+                <h1>속성 선택자</h1>
+                <p3>속성 선택자란 지정한 속성을 가진 요소를 찾아 스타일 적용하는 것.</p3>
                 <ul>
                     <li><a href=#>햄버거</a></li>
                     <li><a href=# target="today">피자</a></li>
@@ -137,8 +169,13 @@
             </div>
         </fieldset>
         <fieldset>
-            <legend>2.
-            </legend>
+            <legend>2.transition(트랜지션)</legend>
+            <p>웹 요소의 스타일 속성이 조금씩 자연스럽게 바뀌는 것.</p>
+            <div class="diagram">
+                <div class="br-tr"></div>
+                <div class="border-circle"></div>
+            </div>
+            <p>속도 조정을 통해 천천히 변화 시키기</p>
         </fieldset>
     </fieldset>
 </body>
