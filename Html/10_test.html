@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.test_html</title>
+    <style>
+        section p {
+            color: red;
+            border: 1px;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1+p {
+            background-color: blue;
+            color: white;
+        }
+
+        h1~p2 {
+            color: blue;
+        }
+
+        a[href] {
+            background: yellow;
+            border: 1px solid black;
+            font-weight: 5px;
+            color: black;
+            text-decoration: none;
+        }
+
+        a[target="today"] {
+            background: blue;
+            color: white;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        [class~=button] {
+            box-shadow: rgba(0, 0, 0, 0.4) 4px 4px;
+            border-radius: 5px;
+        }
+
+        #container {
+            width: 800px;
+            height: 200px;
+            margin: 20px auto;
+        }
+
+        .origin {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            float: left;
+            margin: 40px;
+        }
+
+        .origin>div {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+
+        #movex:hover {
+            transform: translateX(50px);
+        }
+
+        #movey:hover {
+            transform: translatey(50px);
+        }
+
+        #movexy:hover {
+            transform: translate(50px, 50px);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>2024-10-10 복습</h1>
+    <fieldset class="10part">
+        <legend>10단원</legend>
+        <fieldset class="combination_selector">
+            <legend>연결 선택자</legend>
+            <section>
+                <h1>1</h1>
+                <p>인접 형제 선택자 : 같은 부모를 가진 형제 요소 중 첫번째 동생 요소에만 스타일을 적용</p>
+                <p>연결 선택자란 선택자와 선택자를 연결해 적용 대상을 제한하는 선택자.</p>
+                <p>컴비네이션 선택자(combination selector) 또는 '조합선택자'라고 함.</p>
+                <p>주의점 : 연결 선택자는 캐스케이딩때문에 자식 요소(하위의 요소)와 손자 요소(하위의 하위 요소)를 다 변환시킴</p>
+            </section>
+        </fieldset>
+        <fieldset>
+            <legend>형제 선택자</legend>
+            <section>
+                <h1>2</h1>
+                <p2>형제 선택자란 형제 요소들에 스타일을 적용하는 방식.<br>인접 형제 선택자와 다른 점은 모든 형제 요소에 다 적용 됨.</p2>
+            </section>
+        </fieldset>
+        <fieldset>
+            <legend>속성 선택자</legend>
+            <section>
+                <h1>3</h1>
+                <p>속성 선택자란 지정한 속성을 가진 요소를 찾아 스타일 적용하는 것.</p>
+                <ul>
+                    <li><a href=#>햄버거</a></li>
+                    <li><a href=# target="today">피자</a></li>
+                    <p3>[속성 = 값] 주어진 속성과 속성 값이 일치하는 요소를 찾아 스타일 적용</p3>
+                    <li><a href=# class="button">치킨</a></li>
+                    <p3>[속성 ~= 값]여러 속성 값 중에 해당 값이 포함되어 있는 요소를 찾아 스타일 적용</p3>
+                    <li><a href=# class="flat button">족발</a></li>
+                    <p3>[속성 ~= 값]여러 속성 값 중에 해당 값이 포함되어 있는 요소를 찾아 스타일 적용</p3>
+                </ul>
+            </section>
+        </fieldset>
+    </fieldset>
+    <fieldset>
+        <legend>11단원</legend>
+        <fieldset>
+            <legend>1.Translate 함수</legend>
+            <p>지정한 방향으로 이동할 거리를 지정하면 해당 요소를 이동시키는 것.</p>
+            <div id="container">
+                <div class="origin">
+                    <div id="movex"></div>
+                </div>
+                <div class="origin">
+                    <div id="movey"></div>
+                </div>
+                <div class="origin">
+                    <div id="movexy"></div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>2.
+            </legend>
+        </fieldset>
+    </fieldset>
+</body>
+
+</html>
