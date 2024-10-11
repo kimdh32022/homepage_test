@@ -1,11 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2024.10.11_과제</title>
 </head>
+
 <body>
+    <style>
+        a:link,
+        a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            width: 500px;
+            margin: 10px auto;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            width: 120px;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #result {
+            width: 500px;
+            height: 300px;
+            margin: 30px auto;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+        }
+
+        p {
+            width: 80%;
+            padding: 10px;
+            line-height: 2em;
+        }
+
+        #changeBg {
+            width: 500px;
+            height: 300px;
+        }
+
+    </style>
+    <ul>
+        <li><a href="#" onclick="changeBg('noodle.jpg','칼국수','￦6500')">메뉴1</a></li>
+        <li><a href="#" onclick="changeBg('sushi.jpg','초밥','￦13500')">메뉴2</a></li>
+        <li><a href="#" onclick="changeBg('ramen.jpg','라멘','￦8000')">메뉴3</a></li>
+    </ul>
+    <div id="result"></div>
     
+
+
+    <script>
+        // 자바스크립트 함수로 <div> 배경 이미지를 변경하는 기능
+        function changeBg(image,meun,price) {
+            // #result 요소 선택
+            var result = document.getElementById('result');
+            // 이미지 경로를 배경 이미지로 설정 (템플릿 리터럴 사용)
+            result.style.backgroundImage = `url('../jpg/${image}')`;
+        
+            
+        }
+        
+    </script>
 </body>
+
 </html>
