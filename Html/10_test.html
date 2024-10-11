@@ -19,6 +19,7 @@
         h1+p {
             background-color: blue;
             color: white;
+            display: inline;
         }
 
         h1~p2 {
@@ -106,8 +107,18 @@
         .border-circle:hover {
             border-radius: 100%;
         }
-        .diagram{
+
+        .diagram {
             display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
         }
     </style>
 </head>
@@ -138,15 +149,18 @@
             <legend>3</legend>
             <section>
                 <h1>속성 선택자</h1>
-                <p3>속성 선택자란 지정한 속성을 가진 요소를 찾아 스타일 적용하는 것.</p3>
+                <p>속성 선택자란 지정한 속성을 가진 요소를 찾아 스타일 적용하는 것.</p>
                 <ul>
-                    <li><a href=#>햄버거</a></li>
-                    <li><a href=# target="today">피자</a></li>
-                    <p3>[속성 = 값] 주어진 속성과 속성 값이 일치하는 요소를 찾아 스타일 적용</p3>
-                    <li><a href=# class="button">치킨</a></li>
-                    <p3>[속성 ~= 값]여러 속성 값 중에 해당 값이 포함되어 있는 요소를 찾아 스타일 적용</p3>
-                    <li><a href=# class="flat button">족발</a></li>
-                    <p3>[속성 ~= 값]여러 속성 값 중에 해당 값이 포함되어 있는 요소를 찾아 스타일 적용</p3>
+                    <div id="grid">
+                        <li><a href=#>햄버거</a></li>
+                        <li><a href=# target="today">피자</a></li>
+                        <li><a href=# class="button">치킨</a></li>
+                        <li><a href=# class="flat button">족발</a></li>
+                        <div id="article">
+                            <p3>[속성 = 값] 주어진 속성과 속성 값이 일치하는 요소를 찾아 스타일 적용</p3><br>
+                            <p3>[속성 ~= 값]여러 속성 값 중에 해당 값이 포함되어 있는 요소를 찾아 스타일 적용</p3>
+                        </div>
+                    </div>
                 </ul>
             </section>
         </fieldset>
@@ -154,7 +168,8 @@
     <fieldset>
         <legend>11단원</legend>
         <fieldset>
-            <legend>1.Translate 함수</legend>
+            <legend>1</legend>
+            <h1>translate 함수</h1>
             <p>지정한 방향으로 이동할 거리를 지정하면 해당 요소를 이동시키는 것.</p>
             <div id="container">
                 <div class="origin">
@@ -169,13 +184,15 @@
             </div>
         </fieldset>
         <fieldset>
-            <legend>2.transition(트랜지션)</legend>
+            <legend>2</legend>
+            <h1>transition</h1>
             <p>웹 요소의 스타일 속성이 조금씩 자연스럽게 바뀌는 것.</p>
             <div class="diagram">
                 <div class="br-tr"></div>
                 <div class="border-circle"></div>
             </div>
             <p>속도 조정을 통해 천천히 변화 시키기</p>
+            <p>마우스를 물체위에 올려질 시 <strong>(hover)</strong> 색 변환</p>
         </fieldset>
     </fieldset>
 </body>
