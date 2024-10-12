@@ -50,6 +50,9 @@
             height: 300px;
         }
 
+        #text {
+            text-align: center;
+        }
     </style>
     <ul>
         <li><a href="#" onclick="changeBg('noodle.jpg','칼국수','￦6500')">메뉴1</a></li>
@@ -57,20 +60,24 @@
         <li><a href="#" onclick="changeBg('ramen.jpg','라멘','￦8000')">메뉴3</a></li>
     </ul>
     <div id="result"></div>
-    
-
+    <div id="text">
+        <div id="result2"></div>
+        <div id="result3"></div>
+    </div>
 
     <script>
         // 자바스크립트 함수로 <div> 배경 이미지를 변경하는 기능
-        function changeBg(image,meun,price) {
+        function changeBg(image, menu, price) {
             // #result 요소 선택
             var result = document.getElementById('result');
+            var result2 = document.getElementById('result2');
+            var result3 = document.getElementById('result3');
             // 이미지 경로를 배경 이미지로 설정 (템플릿 리터럴 사용)
             result.style.backgroundImage = `url('../jpg/${image}')`;
-        
-            
+            result2.innerText = menu
+            result3.innerText = price
         }
-        
+
     </script>
 </body>
 

@@ -8,12 +8,23 @@
 
 <body>
     <h1><a href="../index.html">Home</a></h1>
+    <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        ">
+    
+        <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        ">
     <div id="grid">
+        
         <ol>
             <li><a href="1_Html.html">HTML</a></li>
             <li><a href="2_Css.html">CSS</a></li>
             <li><a href="3_Java_Script.html">JavaScript</a></li>
         </ol>
+        
         <div id="article">
             <h2>CSS란 무엇인가?</h2>
             <p style="margin-top: 40px;">
