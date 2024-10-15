@@ -40,14 +40,14 @@
 <body>
     <h1>음식 메뉴</h1>
     <div class="menu">
-        <img src="food1.jpg" alt="음식 1" id="food1" class="food-item">
-        <img src="food2.jpg" alt="음식 2" id="food2" class="food-item">
-        <img src="food3.jpg" alt="음식 3" id="food3" class="food-item">
-        <img src="food4.jpg" alt="음식 4" id="food4" class="food-item">
-        <img src="food5.jpg" alt="음식 5" id="food5" class="food-item">
-        <img src="food6.jpg" alt="음식 6" id="food6" class="food-item">
+        <img src="../jpg/maratang.jpg" alt="음식 1" id="food1" class="food-item">
+        <img src="../jpg/noodle.jpg" alt="음식 2" id="food2" class="food-item">
+        <img src="../jpg/paster.jpg" alt="음식 3" id="food3" class="food-item">
+        <img src="../jpg/ramen.jpg" alt="음식 4" id="food4" class="food-item">
+        <img src="../jpg/soup.jpg" alt="음식 5" id="food5" class="food-item">
+        <img src="../jpg/sushi.jpg" alt="음식 6" id="food6" class="food-item">
     </div>
-    <button id="recommendBtn">추천하기</button>
+    <button id="recommendBtn">추천받기</button>
     <div id="foodInfo"></div>
     <p>사진을 클릭하세요!</p>
 
@@ -67,12 +67,12 @@
     <script>
         // 음식 메뉴 정보
         const foodInfo = {
-            food1: { name: "음식 1", price: "10,000원", description: "맛있는 음식 1에 대한 설명입니다." },
-            food2: { name: "음식 2", price: "12,000원", description: "맛있는 음식 2에 대한 설명입니다." },
-            food3: { name: "음식 3", price: "8,000원", description: "맛있는 음식 3에 대한 설명입니다." },
-            food4: { name: "음식 4", price: "15,000원", description: "맛있는 음식 4에 대한 설명입니다." },
-            food5: { name: "음식 5", price: "9,000원", description: "맛있는 음식 5에 대한 설명입니다." },
-            food6: { name: "음식 6", price: "11,000원", description: "맛있는 음식 6에 대한 설명입니다." }
+            food1: { name: "마라탕", price: "10,000원", description: "초피·팔각·정향·회향 따위를 넣고 가열해 향을 낸 기름에[1] 고춧가루와 두반장을 넣고 육수(주로 사골 육수)를 부은 다음 야채·고기·버섯·두부·완자·해산물·푸주·납작당면 등을 넣어 끓이는 중국 요리이다. 쉽게 생각하면 1인용 훠궈." },
+            food2: { name: "칼국수", price: "8,000원", description: "칼국수는 대한민국의 국수로, 칼로 썬 국수를 국물에 담은 탕면류 국수이다." },
+            food3: { name: "파스타", price: "8,000원", description: "파스타(pasta)는 물과 듀럼밀 세몰리나[1]를 반죽하여 만드는 이탈리아의 면과 이를 이용한 음식 전반을 일컫는 말이다." },
+            food4: { name: "라멘", price: "10,000원", description: "라멘(ラーメン, Ramen)은 중국의 수타 탕면인 라미엔(拉面)이 일본에서 현지화되어 만들어진 일본식 중화 요리이다. 중화 요리로 시작해서 인기를 얻은 면요리라는 점에서 한국의 짜장면과 유사한 측면이 있다." },
+            food5: { name: "돼지국밥", price: "8,000원", description: "돼지의 뼈와 살코기를 푹 삶아 우려낸 국물에 삶아진 살코기를 썰어 고명으로 넣고 밥을 말아 먹는 음식. 경상도에서 별다른 수식어 없이 국밥이라 하면 이것을 생각하는 경우가 많다. 밀양과 부산의 대표 음식이다." },
+            food6: { name: "초밥", price: "13,000원", description: "초밥(醋-) 또는 스시(寿司すし, 수사)는 일본 요리의 하나로, 어패류(생선, 조개 등의 수산물)의 살이나 유부·달걀·김 등의 식재료를 배합초에 절인 쌀밥 위에 올려 만드는 음식이다. " }
         };
 
         // 버튼과 음식 메뉴 요소들
