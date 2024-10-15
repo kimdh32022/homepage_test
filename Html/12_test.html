@@ -84,7 +84,8 @@
         recommendBtn.addEventListener('click', () => {
             // 모든 음식의 선택 상태를 해제
             foodItems.forEach(item => item.classList.remove('selected'));
-
+            
+            foodInfoDiv.innerHTML = "";
             // 무작위 음식 선택
             const randomIndex = Math.floor(Math.random() * foodItems.length);
             const selectedFood = foodItems[randomIndex];
