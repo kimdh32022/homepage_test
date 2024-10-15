@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식 추천</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .food-item {
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .food-item.selected {
+            border: 4px solid red;
+        }
+
+        #foodInfo {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>음식 메뉴</h1>
+    <div class="menu">
+        <img src="food1.jpg" alt="음식 1" id="food1" class="food-item">
+        <img src="food2.jpg" alt="음식 2" id="food2" class="food-item">
+        <img src="food3.jpg" alt="음식 3" id="food3" class="food-item">
+        <img src="food4.jpg" alt="음식 4" id="food4" class="food-item">
+        <img src="food5.jpg" alt="음식 5" id="food5" class="food-item">
+        <img src="food6.jpg" alt="음식 6" id="food6" class="food-item">
+    </div>
+    <button id="recommendBtn">추천하기</button>
+    <div id="foodInfo"></div>
+    <p>사진을 클릭하세요!</p>
+
+
+    <div id="container">
+        <h1>먹고 싶은 메뉴를 입력해주세요.</h1>
+        <form action="">
+            <input type="text" id="subject" autofocus>
+            <button onclick="newRegister(); return false;">메뉴 추가</button>
+        </form>
+        <hr>
+        <ul id="itemList">
+
+        </ul>
+    </div>
+
+    <script>
+        // 음식 메뉴 정보
+        const foodInfo = {
+            food1: { name: "음식 1", price: "10,000원", description: "맛있는 음식 1에 대한 설명입니다." },
+            food2: { name: "음식 2", price: "12,000원", description: "맛있는 음식 2에 대한 설명입니다." },
+            food3: { name: "음식 3", price: "8,000원", description: "맛있는 음식 3에 대한 설명입니다." },
+            food4: { name: "음식 4", price: "15,000원", description: "맛있는 음식 4에 대한 설명입니다." },
+            food5: { name: "음식 5", price: "9,000원", description: "맛있는 음식 5에 대한 설명입니다." },
+            food6: { name: "음식 6", price: "11,000원", description: "맛있는 음식 6에 대한 설명입니다." }
+        };
+
+        // 버튼과 음식 메뉴 요소들
+        const recommendBtn = document.getElementById('recommendBtn');
+        const foodItems = document.querySelectorAll('.food-item');
+        const foodInfoDiv = document.getElementById('foodInfo');
+
+        // 추천하기 버튼을 클릭했을 때 무작위로 음식을 선택
+        recommendBtn.addEventListener('click', () => {
+            // 모든 음식의 선택 상태를 해제
+            foodItems.forEach(item => item.classList.remove('selected'));
+
+            // 무작위 음식 선택
+            const randomIndex = Math.floor(Math.random() * foodItems.length);
+            const selectedFood = foodItems[randomIndex];
+
+            // 선택된 음식에 테두리 추가
+            selectedFood.classList.add('selected');
+        });
+
+        // 음식을 클릭했을 때 정보 표시
+        foodItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const foodId = item.id;
+                const info = foodInfo[foodId];
+
+                // 음식 정보 표시
+                foodInfoDiv.innerHTML = `
+            <p><strong>${info.name}</strong></p>
+            <p>가격: ${info.price}</p>
+            <p>${info.description}</p>
+        `;
+            });
+        });
+        function newRegister() {
+            var newItem = document.createElement("li");  // 요소 노드 추가 
+            var subject = document.querySelector("#subject");  // 폼의 텍스트 필드
+            var newText = document.createTextNode(subject.value);  // 텍스트 필드의 값을 텍스트 노드로 만들기
+            newItem.appendChild(newText);  // 텍스트 노드를 요소 노드의 자식 노드로 추가
+
+            var itemList = document.querySelector("#itemList");  // 웹 문서에서 부모 노드 가져오기 
+            itemList.insertBefore(newItem, itemList.childNodes[0]);  // 자식 노드중 첫번째 노드 앞에 추가
+
+            subject.value = "";
+
+            var items = document.querySelectorAll("li");  // 모든 항목 가져오기
+            for (i = 0; i < items.length; i++) {
+                items[i].addEventListener("click", function () {  // 항목 클릭했을 때 실행할 함수
+                    if (this.parentNode)    // 부모 노드가 있다면 
+                        this.parentNode.removeChild(this);  // 부모 노드에서 삭제
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>
