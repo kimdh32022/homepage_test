@@ -15,9 +15,11 @@ body {
 
 ul {
     list-style: none;
-    padding: 0;
-    background-color: #777AA0
-    ;
+    padding: 15px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    margin: 0px;
+
 }
 
 ul li {
@@ -31,14 +33,16 @@ ul li {
 
 ul li:hover {
     background-color: #d0d0d0;
+    border: red solid 2px;
 }
-ul p{
+
+ul p {
     margin: 0px;
 }
 
 fieldset {
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 0px;
     border-radius: 5px;
     margin-top: 20px;
 }
@@ -61,6 +65,8 @@ fieldset {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-right: 20px;
+    font-size: 25px;
+    font-style: italic;
 }
 
 #picture {
@@ -69,7 +75,7 @@ fieldset {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    background-color: white;
+    background-color: rgb(255, 255, 255 0.3);
     /* 이미지 간의 간격 */
 }
 
@@ -110,23 +116,42 @@ fieldset {
     background-color: greenyellow;
     margin-right: 10px;
     border-radius: 10px;
-    ;
+    padding-right: 14px;
+    padding-right: 14px;
 }
 
-.log_out_button {
-    margin-right: 20px;
+.join_button {
     background-color: black;
     border-radius: 10px;
     color: white;
+    box-sizing: border-box;
+
 }
 
 #head {
     display: flex;
-    align-items: centers;
-    padding: 20px;
-    background-color: white;
+    align-items: center;
+    /* 수직 가운데 정렬 */
+    justify-content: space-between;
+    /* 양쪽 끝에 버튼 배치 */
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+.main_text {
+    flex-grow: 1;
+    /* 남은 공간을 차지하도록 설정 */
+    text-align: center;
+    /* 텍스트를 가운데 정렬 */
+    font-size: 24px;
+    font-weight: bold;
 }
 
 #head .meun {
-    margin: 0 auto 0 0;
+    margin-right: auto;
+    padding: 0px;
 }
+button{
+    padding: 14px;
+}}

@@ -12,7 +12,7 @@ body {
 
 /* 로그인 박스 스타일 */
 .log_in_box {
-    background-color: white;
+    background-color: #D9D9D9;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -27,6 +27,7 @@ body {
 
 /* 입력 필드 스타일 */
 input[type="mail"],
+input[type="text"],
 input[type="password"] {
     width: 100%;
     padding: 15px;
@@ -88,4 +89,14 @@ p {
 a {
     text-decoration: none;
     color: inherit;
+}
+.submit_button:hover{
+    background-color: #2196F3;
+}
+.return_button{
+    background-color: #2196F3;
+    color: white;
+}
+.return_button:hover{
+    background-color: #0b7dda;
 }

@@ -10,12 +10,15 @@
 
 <body>
     <div id="head">
-        <button class=meun><img src="./jpg/meunbutton.png"></button>
+        <button class="meun"><img src="./jpg/meunbutton.png"></button>
+        <span class="main_text"><strong>도현 페이지</strong></span>
         <button onclick="location.href='./html/log_in.html'" class="log_in_button">Log_In</button>
-        <button class=log_out_button>Log_Out</button>
+        <button onclick="location.href='./html/join.html'" class=join_button>Join</button>
     </div>
     <div id="grid">
         <ul>
+            <li><div id="time"></div></li>
+
             <li><strong>1월 결과물</strong><br>
                 <p>1월 과제 및 실습현황</p>
             </li>
@@ -52,21 +55,33 @@
             <li><strong>12월 결과물</strong><br>
                 <p>12월 과제 및 실습현황</p>
             </li>
+            
         </ul>
         <fieldset>
             <div id="text">
                 <h1>소개글</h1>
-                <p>대충 나를 소개하는 글 (빼곡히)</p>
-
+                <p>안녕하세요 저는 김도현입니다.<br>저는 이번에 프로그래밍을 처음 배워서 아는 것이 없습니다. 남들 보다 한참 모자라고 기본 배경 지식이 없기에 못 하지만, 열심히 노력해서 풀 스텍
+                    개발자가 되는 것이 목표입니다.
+                    저는 개인적으로 움직이는 것을 좋아하지 않지만 어릴 때 부터 운동을 많이 못해봐서 크면서 운동에 관심을 가지고 성인이 된 이후 부터 이런 저런 운동들을 해보고 있습니다.<br> 그
+                    중 가장 꾸준히 한 것은 주짓수라는 운동입니다.
+                    주짓수는 중학생 때부터 알고 있었지만 부모님이 운동을 못하게 하셨고, 어쩔 수 없이 23살이 된 이후 주짓수도장을 다니게 되었습니다. 주짓수를 하게 되면서 성격도 많이 바뀌고 힘도
+                    좋아지고 몸도 탄탄해졌습니다. 그러면서
+                    평소에 신경 쓰지 않았던 컴퓨터에 관심을 가지게 되었고, 프로그래밍을 알게 되었습니다. 주짓수도 첨에는 잘 못했지만 열심히 노력해서 도장에서 후배들에게 제가 알려줄 수 있는 것들을
+                    알려주고 있습니다. 프로그래밍도
+                    지금 시작이라 잘 못하겠지만 꾸준히 노력해서 잘해지고 나중에 누군가에게 알려줄 수 있는 그런 사람이 되고 싶습니다.
+                </p>
             </div>
-            <div id="picture">
 
-                <img src="./jpg/coding.jpg" width="350px" height="350px">
-                <img src="./jpg/css.jpg " width="350px" height="350px">
-                <img src="./jpg/JavaScript.jpg" width="350px" height="350px">
+            <div id="picture">
+                <img src="./jpg/coding.jpg" width="400px" height="400px">
+                <img src="./jpg/css.jpg " width="400px" height="400px">
+                <img src="./jpg/JavaScript.jpg" width="400px" height="400px">
+                <img src="./jpg/jujitsu.jpg" width="400px" height="400px">
         </fieldset>
     </div>
     </div>
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
