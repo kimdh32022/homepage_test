@@ -152,6 +152,14 @@ fieldset {
     margin-right: auto;
     padding: 0px;
 }
-button{
+
+button {
     padding: 14px;
-}}
+}
+
+#time {
+    text-align: center;
+    line-height: 20px;
+    padding: 2px;
+    
+}

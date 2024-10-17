@@ -1,5 +1,6 @@
 // main.js
 
+// 1)시계 자바스크립트
 // 실시간 시계를 표시하는 함수
 function updateTime() {
     const timeElement = document.getElementById('time');
@@ -13,9 +14,10 @@ function updateTime() {
 // 1초마다 시간 업데이트
 setInterval(updateTime, 1000);
 
+
 // 페이지 로드 시 시간을 즉시 업데이트
 window.onload = updateTime;
-
+// 2) 로그인 여부에 리스트에 안에 파일 확인 하는 것
 // 로그인 여부를 확인하는 변수 (false는 로그인 안됨, true는 로그인됨)
 let isLoggedIn = false;
 
